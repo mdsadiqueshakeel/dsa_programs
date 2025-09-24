@@ -1,4 +1,4 @@
-public class Lec_3 {
+public class Day_3 {
     
         public static void ChudGyeGuruMeme(){
                  String text1 = "CGPA achi karunga";

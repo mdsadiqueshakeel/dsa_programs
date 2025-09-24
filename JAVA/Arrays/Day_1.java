@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Lec_1 {
+public class Day_1 {
     
 // Largest element in Array without sort
     public static int Largest_element(int arr[]){

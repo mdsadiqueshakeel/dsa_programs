@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Lec_2 {
+public class Day_2 {
 
     // Q1. Left Rotated array by one places
     public static int[] reverseArrayByOnPlace(int arr[]){
