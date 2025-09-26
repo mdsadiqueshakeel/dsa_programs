@@ -50,10 +50,40 @@ public class Day_6 {
 
         return -1;
     }
+    // Q2. Maximum Subarray Sum (Better)
+    public static int Maximum_subArray_Sum(int[] arr){
+        int maxi =0;
+        for(int i = 0;i<arr.length; i++){
+            int sum = 0;
+            for(int j = i+1;j<arr.length; j++){
+                sum += arr[j];
+                maxi = Math.max(maxi, sum);
+            }
+        }
+        return maxi;
+    }
+
+    // Q2. Maximum Subarray Sum (Optimal) <<------ Kadane's Algorithm ------>>
+    public static int Maximum_subArray_Sum_Opt(int[] arr){
+        int maxi = Integer.MIN_VALUE;
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++){
+            if(sum < 0){
+                sum = 0;
+            }else{
+                sum += arr[i];
+                maxi = Math.max(maxi, sum);
+            }
+        }
+        return maxi;
+    }
 
     public static void main(String[] args) {
         int[] arr = { 2, 3, 3, 3, 2, 3, 3, 3, 3, 2, 1 };
 
         System.out.println(Majority_Element_Opt(arr));
+
+        int[] max_arr = {-2,-3,4,-1,-2,1,5,-3};
+        System.out.println(Maximum_subArray_Sum_Opt(max_arr));
     }
 }
