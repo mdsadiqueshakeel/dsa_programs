@@ -51,7 +51,7 @@ def Maximum_subArray_Sum_Opt(arr):
     maxi = float("-inf")
     sum = 0
     for i in range(0,len(arr)):
-        if(sum < 0):
+        if(sum < 0 ):
             sum = 0
         else:
             sum += arr[i]
@@ -64,5 +64,5 @@ def Maximum_subArray_Sum_Opt(arr):
 arr = [2,3,3,3,2,3,3,2,1]
 print(Majority_element_Opt(arr))
 
-max_arr = [-2,-3,4,-1,-2,1,5,-3]
+max_arr = [-2,1,-3,4,-1,2,1,-5,4]
 print(Maximum_subArray_Sum_Opt(max_arr))
