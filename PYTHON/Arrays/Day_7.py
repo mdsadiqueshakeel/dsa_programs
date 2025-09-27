@@ -70,6 +70,37 @@ def Rearrange_Alternative(arr):
     return arr
 
 
+# Q3. Next Permutation (Optimal)
+def reverse(arr,start,end):
+    while (start < end):
+        arr[start], arr[end] = arr[end],arr[start]
+        start+=1
+        end-=1
+
+    return arr
+
+def Next_Permutation_Opt(arr):
+    idx = -1
+    for i in range(len(arr)-2,-1,-1):
+        if arr[i] < arr[i+1]:
+            idx = i
+            break
+
+    print(arr[idx])
+    print(idx)
+    if idx == -1:
+        reverse(arr,0,len(arr)-1)
+        return arr
+    
+    for i in range(len(arr)-1,-1,-1):
+        if arr[idx] < arr[i]:
+            arr[idx], arr[i] = arr[i], arr[idx]
+            break
+
+    # print(arr)
+    reverse(arr,idx+1,len(arr)-1)
+
+    return arr
 
 
 
@@ -81,4 +112,7 @@ print(Rearange_Optimal(arr2))
 
 arr3 = [-3,1,-1,-2,-5,2,-4,3,9-8,-2]
 print(Rearrange_Alternative(arr3))
+
+arr4 = [2,1,5,4,3,0,0]
+print(Next_Permutation_Opt(arr4))
 

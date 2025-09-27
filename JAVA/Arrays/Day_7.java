@@ -87,6 +87,46 @@ public class Day_7 {
         return arr;
     }
 
+    // Q3. Next Permutation (Optimal)
+    public static void reverse(int[] arr, int start, int end){
+        while(start < end){
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+            start++;
+            end --;
+        }
+    }
+
+    public static int[] Next_Permutation_Opt(int[] arr){    
+        int idx = -1;
+        for(int i = arr.length-2; i >=0; i--){
+            if(arr[i] < arr[i+1]){
+                idx = i;
+                break;
+            }
+        }
+
+        if(idx == -1){
+            reverse(arr, 0, arr.length-1);
+            return arr;
+        }
+
+        for(int i = arr.length -1; i >= 0; i--){
+            if(arr[idx]  < arr[i]){
+                int temp = arr[idx];
+                arr[idx] = arr[i];
+                arr[i] = temp;
+                break;
+            }
+        }
+
+        reverse(arr, idx+1, arr.length-1);
+
+
+        return arr;
+    }
+
     public static void print(int arr[]){
       for(int i = 0; i < arr.length; i++){
             System.out.print(arr[i]+" ");
@@ -104,5 +144,8 @@ public class Day_7 {
 
         int arr3[] = {-3,1,-1,-2,-5,2,-4,3,9-8,-2};
         print(Rearrange_Alternative(arr3));
+
+        int arr4[] = {2,1,5,4,3,0,0};
+        print(Next_Permutation_Opt(arr4));
     }
 }
