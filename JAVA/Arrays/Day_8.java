@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.stream.Gatherer.Integrator;
 
 public class Day_8 {
 
@@ -28,7 +27,7 @@ public class Day_8 {
         for (int el: arr){
             newSet.add(el);
         }
-        
+
         for (int it : newSet){
             if(!newSet.contains(it -1)){
                 int cnt = 1;
