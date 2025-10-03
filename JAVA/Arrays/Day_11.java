@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Day_11{
     public static ArrayList<Integer> Majority_Element_II(int[] arr){
@@ -37,8 +38,23 @@ public class Day_11{
         if(cnt2 > mini) Answer.add(el2);
         return Answer;
     }
+
+public static ArrayList<Integer> Majority_Element_II_better(int[] arr){
+    HashMap<Integer, Integer> mpp = new HashMap<>();
+    ArrayList<Integer> ans = new ArrayList<>();
+    int n = arr.length;
+    int mini = n/3;
+    for(int i = 0;i< n;i++){
+        mpp.put(arr[i], mpp.getOrDefault(arr[i], 0)+1);
+        if(mpp.get(arr[i]) > mini){
+            ans.add(arr[i]);
+        }
+        if(ans.size() == 2)break;
+    }
+    return ans;
+}
     public static void main(String[] args) {
         int[] arr = {1,1,1,2,2,3,3,3};
-        System.out.println(Majority_Element_II(arr));
+        System.out.println(Majority_Element_II_better(arr));
     }
 }
