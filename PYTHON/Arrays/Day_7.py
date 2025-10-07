@@ -34,7 +34,7 @@ def Rearange_Optimal(arr):
             ans[posIndex] = arr[i]
             posIndex += 2
         else:
-            ans[negIndex] = arr[i]
+            ans[negIndex] = arr[i] 
             negIndex +=2
     return ans
 
