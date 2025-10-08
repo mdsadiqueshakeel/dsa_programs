@@ -111,7 +111,7 @@ arr2 = [3,1,-2,-5,2,-4]
 print(Rearange_Optimal(arr2))
 
 arr3 = [-3,1,-1,-2,-5,2,-4,3,9-8,-2]
-print(Rearrange_Alternative(arr3))
+print(Rearrange_Alternative(arr3)) 
 
 arr4 = [2,1,5,4,3,0,0]
 print(Next_Permutation_Opt(arr4))
