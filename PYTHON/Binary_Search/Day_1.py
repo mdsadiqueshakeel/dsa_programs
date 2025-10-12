@@ -42,3 +42,4 @@ print(upper_bound(arr,10))
 
 nums = [5,2,6,1]
 print(pairs(nums))
+
