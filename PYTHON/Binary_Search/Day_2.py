@@ -17,3 +17,7 @@ def MEX(arr,value):
 
 arr = [1,-10,7,13,6,8]
 print(MEX(arr,5))
+
+k = 2
+for delta in range(-k,k+1):
+    print(delta)

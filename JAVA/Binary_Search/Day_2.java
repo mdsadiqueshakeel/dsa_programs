@@ -1,3 +1,5 @@
+import javax.swing.plaf.synth.SynthPasswordFieldUI;
+
 public class Day_2 {
     public static int findMin(int[] nums) {
         int ans = Integer.MAX_VALUE;
@@ -35,8 +37,16 @@ public class Day_2 {
         return nums[low];
     }
 
+    //solved
     public static void main(String[] args) {
         int arr[] = { 3, 4, 5, 3,3,1, 2 ,3,3};
         System.out.println(findMinII(arr));
+        int k = 2;
+
+        for(int i = -k;i<=k;i++){
+            System.out.print(i+" ");
+        }
+
     }
+
 }
