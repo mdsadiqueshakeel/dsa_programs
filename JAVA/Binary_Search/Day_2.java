@@ -46,7 +46,7 @@ public class Day_2 {
         for(int i = -k;i<=k;i++){
             System.out.print(i+" ");
         }
-
+        //nothing has been done
     }
 
 }
