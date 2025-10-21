@@ -47,6 +47,7 @@ public class Day_2 {
             System.out.print(i+" ");
         }
         //nothing has been done
+        //today also nothing has been done
     }
 
 }
