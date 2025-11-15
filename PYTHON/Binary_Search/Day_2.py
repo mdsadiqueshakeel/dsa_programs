@@ -21,3 +21,4 @@ print(MEX(arr,5))
 k = 2
 for delta in range(-k,k+1):
     print(delta)
+
