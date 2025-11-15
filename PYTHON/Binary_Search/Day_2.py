@@ -23,3 +23,4 @@ for delta in range(-k,k+1):
     print(delta)
 
 # atif names is 
+# 1234567890-sdfghjkl;wertyuiop
