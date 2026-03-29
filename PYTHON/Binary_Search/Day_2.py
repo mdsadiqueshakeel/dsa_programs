@@ -1,4 +1,4 @@
-# Smallest Missing Non-Negetive Integer After Operation
+##### Smallest Missing Non-Negetive Integer After Operation
 
 def MEX(arr,value):
     lst = []
@@ -21,4 +21,7 @@ print(MEX(arr,5))
 k = 2
 for delta in range(-k,k+1):
     print(delta)
+
+
+
 
