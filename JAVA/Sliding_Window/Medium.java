@@ -30,4 +30,6 @@ public class Medium {
         System.out.println(Longest_K_distinct(name, 3));
 
     }
+
+    
 }
