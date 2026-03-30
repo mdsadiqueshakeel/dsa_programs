@@ -1,9 +1,10 @@
 package Sliding_Window;
 
-import java.util.HashMap;
+import java.util.*;
 
 public class Medium {
     // longest substring with k distinct characters
+    
     public static int Longest_K_distinct(String str, int k){
         int left = 0;
         int right = 0;
@@ -26,6 +27,8 @@ public class Medium {
         return maxlen;
     }
     public static void main(String[] args) {
+
+        PriorityQueue<Integer> pq = new PriorityQueue<>(Comparator.reverseOrder())
         String name = "aaabbccdd";
         System.out.println(Longest_K_distinct(name, 3));
 
