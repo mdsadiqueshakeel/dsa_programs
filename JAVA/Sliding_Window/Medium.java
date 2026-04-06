@@ -31,6 +31,7 @@ public class Medium {
         PriorityQueue<Integer> pq = new PriorityQueue<>(Comparator.reverseOrder())
         String name = "aaabbccdd";
         System.out.println(Longest_K_distinct(name, 3));
+        System.out.println(Longest_K_distinct(name, 3));
 
     }
 
